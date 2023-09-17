@@ -113,7 +113,7 @@ struct NativeBridgeCallbacks {
 
 bool NativeBridgeLoad(const char *game_data_dir, int api_level, void *data, size_t length) {
     //TODO 等待houdini初始化
-    sleep(5);
+    sleep(30);
 
     auto libart = dlopen("libart.so", RTLD_NOW);
     auto JNI_GetCreatedJavaVMs = (jint (*)(JavaVM **, jsize, jsize *)) dlsym(libart,
